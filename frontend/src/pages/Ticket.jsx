@@ -46,7 +46,7 @@ function Ticket() {
         }
 
         dispatch(getTicket(ticketId))
-        dispatch(getNotes())
+        dispatch(getNotes(ticketId))
         // eslint-disable-next-line
     }, [isError, message, ticketId])
 
