@@ -1,8 +1,8 @@
 const asyncHandler = require('express-async-handler')
 
 const User = require('../models/userModel')
-const Ticket = require('../models/ticketModel')
 const Note = require('../models/noteModel')
+const Ticket = require('../models/ticketModel')
 
 // @desc Get notes for a ticket
 // @route GET /api/tickets/:ticketId/notes
@@ -25,7 +25,7 @@ const getNotes = asyncHandler( async(req, res) => {
 
     const notes = await Note.find({ ticket: req.params.ticketId})
    
-    res.status(200).json({notes})
+    res.status(200).json(notes)
 })
 
 // @desc Create note for a ticket
@@ -51,7 +51,7 @@ const addNote = asyncHandler( async(req, res) => {
         text: req.body.text,
         isStaff: false,
         ticket: req.params.ticketId,
-        user: req.user.id
+        user: req.user.id,
     })
    
     res.status(200).json(note)
