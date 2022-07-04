@@ -7,8 +7,6 @@
 
 - This is a MERN stack project meaning it utilizes MongoDB, Express, Redux and Node.js to provide fullstack deployment.
 
-## My personal highlight 
-
 # Technologies Used:
 * React
 * Redux
